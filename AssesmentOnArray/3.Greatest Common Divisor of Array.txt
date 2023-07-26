@@ -1,0 +1,19 @@
+3.Find Greatest Common Divisor of Array
+
+JAVA
+
+class Solution {
+    public int findGCD(int[] nums) {
+        Arrays.sort(nums);
+        int n=nums[nums.length-1];
+        int r=nums[0];
+        while(r>0){
+            if(nums[0]%r==0 && n%r==0){
+                break;
+            }
+            r--;
+        }
+        return r;
+    }
+}
+
